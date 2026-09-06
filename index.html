@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI会社</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="app-header">
+    <div class="logo-mark">AI</div>
+    <h1>AI会社</h1>
+  </header>
+
+  <main class="container">
+
+    <!-- AI社員プロフィール -->
+    <section class="card profile-card">
+      <div class="avatar">🌸</div>
+      <div class="profile-info">
+        <p class="profile-name">あおい <span class="badge">AI社員</span></p>
+        <p class="profile-role">企画・業務アシスタント</p>
+        <p class="profile-trait">明るく、丁寧で、仕事が早いです！なんでもお申し付けください✨</p>
+      </div>
+      <div class="status-dot" title="オンライン"></div>
+    </section>
+
+    <!-- 指示入力 -->
+    <section class="card">
+      <label for="instruction" class="section-label">社長からの指示</label>
+      <textarea id="instruction" rows="4" placeholder="例）来週の新商品発表イベントの企画案を考えてほしい"></textarea>
+      <button id="ask-btn" class="primary-btn">
+        <span class="btn-icon">💬</span> AI社員に相談する
+      </button>
+    </section>
+
+    <!-- AI社員の回答 -->
+    <section class="card answer-card" id="answer-section" hidden>
+      <label class="section-label">あおいの回答</label>
+      <div class="answer-box" id="answer-box"></div>
+    </section>
+
+    <!-- 次にやること -->
+    <section class="card suggestion-card" id="suggestion-section" hidden>
+      <label class="section-label">次にやること</label>
+      <ul class="suggestion-list" id="suggestion-list"></ul>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <p>※ 現在はダミー応答です（API接続は未実装）</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
