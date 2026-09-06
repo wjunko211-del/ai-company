@@ -19,9 +19,9 @@
     <section class="card profile-card">
       <div class="avatar">🌸</div>
       <div class="profile-info">
-        <p class="profile-name">あおい <span class="badge">AI社員</span></p>
-        <p class="profile-role">企画・業務アシスタント</p>
-        <p class="profile-trait">明るく、丁寧で、仕事が早いです！なんでもお申し付けください✨</p>
+        <p class="profile-name"><span id="employee-name">あおい</span> <span class="badge">AI社員</span></p>
+        <p class="profile-role" id="employee-role">企画・業務アシスタント</p>
+        <p class="profile-trait" id="employee-trait">明るく、丁寧で、仕事が早いです！なんでもお申し付けください✨</p>
       </div>
       <div class="status-dot" title="オンライン"></div>
     </section>
@@ -47,10 +47,16 @@
       <ul class="suggestion-list" id="suggestion-list"></ul>
     </section>
 
+    <!-- エラー -->
+    <section class="card error-card" id="error-section" hidden>
+      <label class="section-label">エラー</label>
+      <div class="error-box" id="error-box"></div>
+    </section>
+
   </main>
 
   <footer class="app-footer">
-    <p>※ 現在はダミー応答です（API接続は未実装）</p>
+    <p>※ Claude APIに接続しています。回答内容はAIによる生成です。</p>
   </footer>
 
 <script src="script.js"></script>

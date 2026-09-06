@@ -237,6 +237,20 @@ textarea:focus {
   color: var(--text-main);
 }
 
+.error-card {
+  border-color: rgba(230, 90, 90, 0.35);
+}
+
+.error-box {
+  background: linear-gradient(135deg, #fff2f2, #fff7f0);
+  border: 1px solid rgba(230, 90, 90, 0.3);
+  border-radius: 14px;
+  padding: 16px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #a13939;
+}
+
 .suggestion-list {
   margin: 0;
   padding: 0;
