@@ -1,0 +1,13 @@
+{
+  "name": "ai-company",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AI社員「あおい」に相談できるシンプルなAI会社Webアプリ",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.124.0"
+  }
+}

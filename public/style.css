@@ -1,0 +1,316 @@
+:root {
+  --bg-1: #eef4ff;
+  --bg-2: #f7f0ff;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --accent: #6c8bff;
+  --accent-2: #9b6cff;
+  --accent-3: #4fd1c5;
+  --text-main: #24273a;
+  --text-sub: #6b7089;
+  --border: rgba(108, 139, 255, 0.18);
+  --shadow: 0 8px 24px rgba(90, 100, 180, 0.12);
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", -apple-system,
+    BlinkMacSystemFont, sans-serif;
+  color: var(--text-main);
+  background: radial-gradient(circle at 15% 0%, var(--bg-2), transparent 55%),
+    radial-gradient(circle at 85% 10%, #e6fbf8, transparent 45%),
+    var(--bg-1);
+  background-attachment: fixed;
+  padding-bottom: 40px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 20px 10px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.logo-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 4px 14px rgba(108, 139, 255, 0.4);
+}
+
+.app-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  letter-spacing: 0.02em;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 8px 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  background: linear-gradient(135deg, #d6e4ff, #f1e3ff);
+  box-shadow: inset 0 0 0 3px #fff, 0 4px 12px rgba(108, 139, 255, 0.25);
+}
+
+.profile-info {
+  min-width: 0;
+}
+
+.profile-name {
+  margin: 0 0 2px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent-3), #38b2ac);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.profile-role {
+  margin: 0 0 6px;
+  font-size: 0.85rem;
+  color: var(--accent-2);
+  font-weight: 600;
+}
+
+.profile-trait {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-sub);
+  line-height: 1.5;
+}
+
+.status-dot {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4fd17e;
+  box-shadow: 0 0 0 3px rgba(79, 209, 126, 0.25);
+}
+
+.section-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-sub);
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--text-main);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(108, 139, 255, 0.15);
+}
+
+.primary-btn {
+  margin-top: 14px;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 13px 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 6px 16px rgba(108, 139, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(108, 139, 255, 0.45);
+}
+
+.primary-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(108, 139, 255, 0.3);
+}
+
+.primary-btn:disabled {
+  opacity: 0.7;
+  cursor: default;
+  transform: none;
+}
+
+.btn-icon {
+  font-size: 1.05rem;
+}
+
+.answer-box {
+  background: linear-gradient(135deg, #f4f7ff, #faf5ff);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  color: var(--text-main);
+}
+
+.error-card {
+  border-color: rgba(230, 90, 90, 0.35);
+}
+
+.error-box {
+  background: linear-gradient(135deg, #fff2f2, #fff7f0);
+  border: 1px solid rgba(230, 90, 90, 0.3);
+  border-radius: 14px;
+  padding: 16px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #a13939;
+}
+
+.suggestion-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.suggestion-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.suggestion-list li::before {
+  content: "✓";
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-3), #38b2ac);
+  color: #fff;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.app-footer {
+  max-width: 640px;
+  margin: 20px auto 0;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.app-footer p {
+  font-size: 0.75rem;
+  color: var(--text-sub);
+}
+
+/* スマホ表示 */
+@media (max-width: 420px) {
+  .app-header h1 {
+    font-size: 1.3rem;
+  }
+  .card {
+    padding: 16px;
+    border-radius: 14px;
+  }
+  .avatar {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+  }
+}
