@@ -1,0 +1,92 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f7f7f8;
+  --fg: #1a1a1a;
+  --card: #ffffff;
+  --border: #ddd;
+  --accent: #d97757;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1a1a;
+    --fg: #f0f0f0;
+    --card: #262626;
+    --border: #3a3a3a;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+h1 { font-size: 1.2rem; margin: 0; }
+
+.status { font-size: 0.85rem; }
+.status.ok { color: #2e8540; }
+.status.bad { color: #c0392b; }
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px 20px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+select, input, button {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--fg);
+}
+
+#messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 200px;
+}
+
+.msg {
+  padding: 10px 12px;
+  border-radius: 10px;
+  max-width: 85%;
+  white-space: pre-wrap;
+}
+
+.msg.user { align-self: flex-end; background: var(--accent); color: white; }
+.msg.assistant { align-self: flex-start; background: var(--card); border: 1px solid var(--border); }
+.msg.error { align-self: center; color: #c0392b; font-size: 0.9rem; }
+
+#chat-form {
+  display: flex;
+  gap: 8px;
+}
+
+#chat-form input { flex: 1; }
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled { opacity: 0.6; cursor: default; }

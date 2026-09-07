@@ -1,0 +1,15 @@
+{
+  "name": "ai-company",
+  "version": "1.0.0",
+  "description": "AI Company - a small web app where AI \"employees\" powered by Claude answer requests",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "express": "^4.21.2"
+  }
+}
